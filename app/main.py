@@ -1,3 +1,7 @@
+"""
+Módulo principal da aplicação.
+"""
+
 from fastapi import FastAPI
 from app.routes import base
 
