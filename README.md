@@ -1,20 +1,14 @@
-# 🧠 NLP API Project (FastAPI)
+# 🧠 Case Prático AutoU - Luan Rodrigues Carlos
 
-Este projeto é uma API básica desenvolvida com **FastAPI**, com estrutura preparada para ser expandida com funcionalidades de **Processamento de Linguagem Natural (NLP)** e integração com APIs de Inteligência Artificial (como OpenAI ou Hugging Face).
+Este projeto é uma API desenvolvida para o Case Prático AutoU, com o objetivo de criar uma aplicação web simples e eficiente que utiliza inteligência artificial para automação do processamento de emails.
 
----
+Informações de Contato:
 
-## 📁 Estrutura do Projeto
+Nome: Luan Rodrigues carlos
 
-nlp_api_project/
-├── app/
-│ ├── main.py # Ponto de entrada da aplicação
-│ └── routes/
-│ └── base.py # Rotas definidas
-├── requirements.txt # Lista de dependências
-├── README.md # Este arquivo
-├── .gitignore # Arquivos/pastas ignoradas pelo Git
-└── venv/ # Ambiente virtual (não versionado)
+Email: rodrigues.luan20@gmail.com
+
+Telefone: (21) 98152-8060
 
 ---
 
@@ -25,14 +19,14 @@ nlp_api_project/
 ````bash
 git clone https://github.com/seu-usuario/seu-repo.git
 cd seu-repo
-
+````
 ---
 
 ### 2. Crie o ambiente virtual
 
 ```bash
 python -m venv venv
-
+````
 ---
 
 ### 3. Ative o ambiente virtual
@@ -40,28 +34,29 @@ python -m venv venv
 No Linux/macOS ou WSL:
 ```bash
 source venv/bin/activate
-
+````
 No Windows (CMD):
 ```bash
 venv\Scripts\activate
-
+````
 No Windows (PowerShell):
 ```bash
 .\venv\Scripts\Activate.ps1
-
+````
 ---
 
 ### 4. Instale as dependências
 
 ```bash
 pip install -r requirements.txt
-
+````
 ---
 
 ### 5. Rode a aplicação
 
 ```bash
 uvicorn app.main:app --reload
+````
 
 A API estará acessível em: http://localhost:8000
 
