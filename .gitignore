@@ -1,0 +1,21 @@
+# Ignora o ambiente virtual
+venv/
+
+# Ignora arquivos e pastas geradas pelo Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignora arquivos temporários de editores de texto
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Ignora configurações do VSCode (se estiver usando)
+.vscode/
+
+# Ignora arquivos do sistema (ex: no macOS ou Windows)
+.DS_Store
+Thumbs.db
