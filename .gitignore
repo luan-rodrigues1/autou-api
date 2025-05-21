@@ -1,15 +1,44 @@
-# Ignora o ambiente virtual
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
 venv/
+ENV/
+
+# Environment Variables
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
 
 # Ignora arquivos e pastas geradas pelo Python
-__pycache__/
 *.pyc
 *.pyo
 *.pyd
 
 # Ignora arquivos temporários de editores de texto
-*.swp
-*.swo
 *.bak
 *.tmp
 
