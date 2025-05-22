@@ -1,9 +1,3 @@
-"""
-Módulo para processamento de texto usando técnicas de NLP.
-Implementa funções para remoção de stop words, stemming e lemmatização.
-"""
-
-# Lista de stop words em português
 STOP_WORDS = {
     'a', 'o', 'as', 'os', 'um', 'uma', 'uns', 'umas', 'e', 'é', 'é', 'está', 'estou',
     'estamos', 'estão', 'estive', 'esteve', 'estivemos', 'estiveram', 'estava',
@@ -23,30 +17,18 @@ STOP_WORDS = {
 }
 
 def remove_stop_words(text: str) -> str:
-    """
-    Remove stop words do texto.
-    """
-    # Converte o texto para minúsculas e divide em palavras
     words = text.lower().split()
     
-    # Filtra as palavras que não são stop words
     filtered_words = [word for word in words if word not in STOP_WORDS]
     
-    # Junta as palavras novamente em um texto
     return ' '.join(filtered_words)
 
 def stem_word(word: str) -> str:
-    """
-    Implementa um algoritmo simples de stemming para português.
-    Remove sufixos comuns das palavras.
-    """
-    # Lista de sufixos comuns em português
     sufixos = ['ar', 'er', 'ir', 'or', 'al', 'el', 'il', 'ol', 'ul', 'ão', 'ões',
                'mente', 'ção', 'ções', 'dor', 'dora', 'dores', 'doras', 'ista',
                'istas', 'oso', 'osa', 'osos', 'osas', 'ível', 'ível', 'íveis',
                'ável', 'ável', 'áveis']
     
-    # Tenta remover cada sufixo
     for sufixo in sufixos:
         if word.endswith(sufixo):
             return word[:-len(sufixo)]
@@ -54,19 +36,11 @@ def stem_word(word: str) -> str:
     return word
 
 def stem_text(text: str) -> str:
-    """
-    Aplica stemming em todas as palavras do texto.
-    """
     words = text.split()
     stemmed_words = [stem_word(word) for word in words]
     return ' '.join(stemmed_words)
 
 def lemmatize_word(word: str) -> str:
-    """
-    Implementa um algoritmo simples de lemmatização para português.
-    Tenta converter a palavra para sua forma base.
-    """
-    # Dicionário de exceções para lemmatização
     exceptions = {
         'estou': 'estar',
         'está': 'estar',
@@ -85,32 +59,21 @@ def lemmatize_word(word: str) -> str:
         'foram': 'ir'
     }
     
-    # Verifica se a palavra está no dicionário de exceções
     if word in exceptions:
         return exceptions[word]
     
-    # Se não estiver nas exceções, aplica stemming
     return stem_word(word)
 
 def lemmatize_text(text: str) -> str:
-    """
-    Aplica lemmatização em todas as palavras do texto.
-    """
     words = text.split()
     lemmatized_words = [lemmatize_word(word) for word in words]
     return ' '.join(lemmatized_words)
 
 def preprocess_text(text: str) -> dict:
-    """
-    Aplica todas as técnicas de pré-processamento no texto.
-    """
-    # Remove stop words
     text_without_stop_words = remove_stop_words(text)
     
-    # Aplica stemming
     stemmed_text = stem_text(text_without_stop_words)
     
-    # Aplica lemmatização
     lemmatized_text = lemmatize_text(text_without_stop_words)
     
     return {
