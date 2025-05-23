@@ -1,12 +1,12 @@
 # 🧠 Case Prático AutoU - Luan Rodrigues Carlos
 
-Este projeto é uma API desenvolvida para o Case Prático AutoU, com o objetivo de criar uma aplicação web simples e eficiente que utiliza inteligência artificial para automação do processamento de emails.
+Este projeto é uma API desenvolvida para o Case Prático AutoU, com o objetivo de criar uma aplicação que utiliza inteligência artificial para automação do processamento de emails.
 
 [📚 Ver documentação da API](#-documentação-da-api)
 
-Informações de Contato:
+Link do deploy da aplicação: [https://autou-front-77008956635.southamerica-east1.run.app](https://autou-api-77008956635.southamerica-east1.run.app)
 
-Nome: Luan Rodrigues carlos
+Informações de Contato:
 
 Email: rodrigues.luan20@gmail.com
 
@@ -77,7 +77,7 @@ cp .env.example .env
 OPENAI_API_KEY=sua_chave_aqui
 ```
 
-> ⚠️ **Importante**: Você precisa ter uma chave de API válida da OpenAI para que a aplicação funcione corretamente. Você pode obter uma chave em [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+> ⚠️ **Importante**: Você precisa ter uma chave de API válida da OpenAI para que a aplicação funcione corretamente.
 
 ---
 
@@ -150,10 +150,4 @@ curl -X POST "http://localhost:8000/email" \
     "content": "Prezado(a),\n\nAgradeço seu contato. Estou analisando sua solicitação e retornarei em breve com mais informações.\n\nAtenciosamente,\n[Seu Nome]"
   }
 }
-```
-
----
-
-```
-
 ```
