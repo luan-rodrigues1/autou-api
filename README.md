@@ -63,7 +63,25 @@ pip install -r requirements.txt
 
 ---
 
-### 5. Rode a aplicação
+### 5. Configure as variáveis de ambiente
+
+1. Copie o arquivo `.env.example` para `.env`:
+
+```bash
+cp .env.example .env
+```
+
+2. Edite o arquivo `.env` e adicione sua chave da API da OpenAI:
+
+```bash
+OPENAI_API_KEY=sua_chave_aqui
+```
+
+> ⚠️ **Importante**: Você precisa ter uma chave de API válida da OpenAI para que a aplicação funcione corretamente. Você pode obter uma chave em [https://platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+
+---
+
+### 6. Rode a aplicação
 
 ```bash
 uvicorn app.main:app --reload
