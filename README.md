@@ -19,7 +19,7 @@ Telefone: (21) 98152-8060
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone https://github.com/seu-usuario/autou-api.git
 cd seu-repo
 ```
 
